@@ -7,13 +7,13 @@ module.exports = {
         .setDescription('Clears the queue.'),
     async execute({ client, interaction }) {
 
-        const queue = useQueue(interaction.guildId);
-        if (!queue || !queue.isPlaying()) {
-            return interaction.reply({ content: 'No music is being played!', ephemeral: true });
-        }
+        // const queue = useQueue(interaction.guildId);
+        // if (!queue || !queue.isPlaying()) {
+        //     return interaction.reply({ content: 'No music is being played!', ephemeral: true });
+        // }
 
-        queue.delete();
+        // queue.delete();
 
-        return interaction.reply({ content: 'Cleared the queue.' });
+        // return interaction.reply({ content: 'Cleared the queue.' });
     },
 };

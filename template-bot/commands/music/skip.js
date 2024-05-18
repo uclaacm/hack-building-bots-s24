@@ -7,13 +7,13 @@ module.exports = {
         .setDescription('Skips the current song.'),
     async execute({ client, interaction }) {
 
-        const queue = useQueue(interaction.guildId);
-        if (!queue || !queue.isPlaying()) {
-            return interaction.reply({ content: 'No music is being played!', ephemeral: true });
-        }
+        // const queue = useQueue(interaction.guildId);
+        // if (!queue || !queue.isPlaying()) {
+        //     return interaction.reply({ content: 'No music is being played!', ephemeral: true });
+        // }
 
-        queue.node.skip()
+        // queue.node.skip()
 
-        return interaction.reply({ content: `Skipped the current song: ${queue.currentTrack.title}` });
+        // return interaction.reply({ content: `Skipped the current song: ${queue.currentTrack.title}` });
     },
 };

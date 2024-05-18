@@ -20,15 +20,15 @@ module.exports = {
                 )),
     async execute({ client, interaction }) {
 
-        const queue = useQueue(interaction.guildId);
-        if (!queue || !queue.isPlaying()) {
-            return interaction.reply({ content: 'No music is being played!', ephemeral: true });
-        }
+        // const queue = useQueue(interaction.guildId);
+        // if (!queue || !queue.isPlaying()) {
+        //     return interaction.reply({ content: 'No music is being played!', ephemeral: true });
+        // }
 
-        const mode = interaction.options.getInteger('mode');
+        // const mode = interaction.options.getInteger('mode');
 
-        queue.setRepeatMode(mode);
+        // queue.setRepeatMode(mode);
 
-        return interaction.reply({ content: `Set loop mode to **${loopModes[mode]}**` });
+        // return interaction.reply({ content: `Set loop mode to **${loopModes[mode]}**` });
     },
 };

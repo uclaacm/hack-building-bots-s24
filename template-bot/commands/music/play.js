@@ -11,30 +11,30 @@ module.exports = {
                 .setRequired(true)),
     async execute({ client, interaction }) {
 
-        const player = useMainPlayer();
+        // const player = useMainPlayer();
 
-        const channel = interaction.member.voice.channel;
-        const song = interaction.options.getString('song', true);
+        // const channel = interaction.member.voice.channel;
+        // const song = interaction.options.getString('song', true);
 
-        if (!channel) {
-            return interaction.reply('You need to join a voice channel first!');
-        }
+        // if (!channel) {
+        //     return interaction.reply('You need to join a voice channel first!');
+        // }
 
-        // let's defer the interaction as things can take time to process
-        await interaction.deferReply();
+        // // let's defer the interaction as things can take time to process
+        // await interaction.deferReply();
 
-        try {
-            await player.play(channel, song, {
-                nodeOptions: {
-                    metadata: interaction.channel
-                }
-            });
+        // try {
+        //     await player.play(channel, song, {
+        //         nodeOptions: {
+        //             metadata: interaction.channel
+        //         }
+        //     });
 
-            return interaction.followUp("yippe!");
-        } catch (e) {
-            // let's return error if something failed
-            return interaction.followUp(`Something went wrong: ${e}`);
-        }
+        //     return interaction.followUp("yippe!");
+        // } catch (e) {
+        //     // let's return error if something failed
+        //     return interaction.followUp(`Something went wrong: ${e}`);
+        // }
 
     },
 };
