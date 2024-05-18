@@ -26,6 +26,7 @@ You should be able to just do `npm install` inside of each of the folders to ins
 The list is short:
 
 ```shell
+$ npm install discord.js
 $ npm install --save discord-player # main library
 $ npm install --save @discord-player/extractor # extractors provider
 $ npm install --save mediaplex
